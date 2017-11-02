@@ -1,7 +1,7 @@
 {
-  "name": "scratch",
-  "version": "0.0.0",
-  "description": "",
+  "name": "operon",
+  "version": "0.0.1",
+  "description": "Extensible chaining operators using Symbols.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
