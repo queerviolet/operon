@@ -4,7 +4,7 @@ const op = require('./operon')
 const count = op('count')
 
 Object [adopts] (count) (_ => 1)
-Array  [adopts] (count) (({length}) => length)
+Array  [adopts] (count) (_ => _.length)
 String [adopts] (count) (_ => _.length)
 
 console.log([1, 2, 3] [count] ())
