@@ -1,4 +1,4 @@
-const adopts = module.exports = require('./operon')('adopts')
+const adopts = module.exports = require('./operon')('adopts(Constructor, impl: Function)')
 
 const {toPrimitive} = Symbol
 Function.prototype [adopts] = function(op) {
