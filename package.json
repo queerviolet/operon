@@ -1,6 +1,6 @@
 {
   "name": "operon",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extensible chaining operators using Symbols.",
   "repository": "https://github.com/queerviolet/operon",
   "main": "index.js",

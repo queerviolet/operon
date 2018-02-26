@@ -19,11 +19,26 @@ Under the hood, operons use Symbols to safely extend arbitrary prototypes.
 ```js
 const {operon, adopts} = require('operon')
 
-const count = op('count')
+const count = operon('count')
 
 Object [adopts] (count) (_ => 1)
 Array  [adopts] (count) (_ => _.length)
 String [adopts] (count) (_ => _.length)
+
+// Types can implement operons directly
+class MyType {
+  [count]() {
+    return 100
+  }
+}
+
+console.log(count(new MyType))  // 100
+
+// Or with adopts
+class AnotherType {}
+AnotherType [adopts] (count) (_ => 100)
+
+console.log(count(new AnotherType)) // 100
 
 console.log(count('hello'))       // 5
 console.log('hello'[count]())     // equivalently, 5
